@@ -1,38 +1,31 @@
+
 const playerNameArray = [];
+function displaySelectedV(players) {
+    const tableBody = document.getElementById("select-player");
 
-function displaySelectedV(playerNameList){
-    const tableBody = document.getElementById('players');
-      
-    tableBody.innerHTML = "";
-    const selectedPlayerLength =  playerNameList.length;
-   
-    
-    for(let i = 0; i < selectedPlayerLength; i++){
-       const tr = document.createElement('tr');
-      
-       if(playerNameList.length < 6){
-       
-        tr.innerHTML = `
-        <th>${i + 1}</th>
-        <td>${playerNameList[i]}</td>
-        `
-        tableBody.appendChild(tr);
-      
-        
-        
-      }
-    
-      else{
-        
-        alert('Dont add')
+    if (players.length > 5) {
+        alert("Don't add more players");
+        playerNameArray.pop();
 
-        return;
+    }
+    else {
+        tableBody.innerHTML = '';
+        for (let i = 0; i < players.length; i++) {
 
-     }  
-     
-    }     
-   
-   
+            const player = players[i];
+            const tr = document.createElement('tr');
+
+            tr.innerHTML = `  
+            <th> ${i + 1} </th>
+            
+            <td>${player} </td>
+            `
+
+            tableBody.appendChild(tr);
+          
+        }
+    }
+
 }
 
 function addToSelectedV(element){
@@ -40,6 +33,7 @@ function addToSelectedV(element){
     const playerName = element.parentNode.children[0].innerText;
     playerNameArray.push(playerName);
     displaySelectedV(playerNameArray);
+
     element.classList.add("disabled");
    
 }
