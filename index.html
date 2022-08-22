@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Select Best Five</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -31,7 +31,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Sergio Ramos</h5>
                   <p class="card-text">20 Goal 120 Assits.</p>
-                  <a href="#" class="btn btn-primary">Select</a>
+                  <a href="#" id="btn-ramos" class="btn btn-primary"  onclick="addToSelectedV(this)">Select</a>
                 </div>
               </div>
 
@@ -40,7 +40,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Vítor Machado</h5>
                   <p class="card-text">20 Goal 120 Assits.</p>
-                  <a href="#" class="btn btn-primary">Select</a>
+                  <a href="#" id="btn-vitor" class="btn btn-primary"  onclick="addToSelectedV(this)">Select</a>
                 </div>
               </div>
 
@@ -49,7 +49,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Chirstanio Ronaldo</h5>
                   <p class="card-text">20 Goal 120 Assits.</p>
-                  <a href="#" class="btn btn-primary">Select</a>
+                  <a href="#" btn-ronaldo class="btn btn-primary"  onclick="addToSelectedV(this)">Select</a>
                 </div>
               </div>
               
@@ -60,7 +60,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Tomas mullar</h5>
                   <p class="card-text">20 Goal 120 Assits.</p>
-                  <a href="#" class="btn btn-primary">Select</a>
+                  <a href="#" id="btn-mullar" class="btn btn-primary"  onclick="addToSelectedV(this)">Select</a>
                 </div>
               </div>
 
@@ -69,7 +69,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Renato Sanches</h5>
                   <p class="card-text">20 Goal 120 Assits.</p>
-                  <a href="#" class="btn btn-primary">Select</a>
+                  <a href="#" id="btn-renato" class="btn btn-primary" onclick="addToSelectedV(this)" >Select</a>
                 </div>
               </div>
 
@@ -78,7 +78,7 @@
                 <div class="card-body">
                   <h5 class="card-title">David Luiz</h5>
                   <p class="card-text">20 Goal 120 Assits</p>
-                  <a href="#" class="btn btn-primary">Select</a>
+                  <a href="#" id="btn-luiz" class="btn btn-primary" onclick="addToSelectedV(this)">Select</a>
                 </div>
               </div>
 
@@ -95,18 +95,18 @@
         <div class="text-white height" style="width: 20rem;">
            <h2 class="text-center my-3">Budget</h2>
            <hr>
-           <h4 class="ms-3 py-3">Per Player :   <input class="w-50" type="text"> </h4>
+           <h4 class="ms-3 py-3">Per Player :   <input id="per-player-field" class="w-50" type="text"> </h4>
           <h3 class="text-center"> <button class="btn btn-primary">Calculate</button></h3>
 
-          <h4 class="ms-3 my-4">Player Expenses :  $<span>5000</span></h4>
+          <h4 class="ms-3 my-4">Player Expenses :  $<span id="player-expense">5000</span></h4>
 
-          <h4 class="ms-3 py-3">Coach :   <input class="w-50" type="text"> </h4>
+          <h4 class="ms-3 py-3">Coach :   <input id="coach-field" class="w-50" type="text"> </h4>
 
-          <h4 class="ms-3 py-3">Manager :   <input class="w-50" type="text"> </h4>
+          <h4 class="ms-3 py-3">Manager :   <input id="manager-field" class="w-50" type="text"> </h4>
 
           <h3 class="text-center"> <button class="btn btn-primary">Calculate Total</button></h3>
 
-          <h4 class=" ms-2 my-4">Total Cost  :  $<span class="color">5000</span></h4>
+          <h4 class=" ms-2 my-4">Total Cost  :  $<span id="final-cost" class="color">5000</span></h4>
 
         </div>
 
