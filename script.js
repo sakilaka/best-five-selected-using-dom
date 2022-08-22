@@ -4,8 +4,8 @@ function displaySelectedV(players) {
     const tableBody = document.getElementById("select-player");
 
     if (players.length > 5) {
-        alert("Don't add more players");
-        playerNameArray.pop();
+        alert("You can't add more players");
+      return;
 
     }
     else {
@@ -33,7 +33,11 @@ function addToSelectedV(element){
     const playerName = element.parentNode.children[0].innerText;
     playerNameArray.push(playerName);
     displaySelectedV(playerNameArray);
+    if(playerNameArray.length < 6){
+      element.classList.add("disabled");
+      return;
+    }
 
-    element.classList.add("disabled");
+    
    
 }
